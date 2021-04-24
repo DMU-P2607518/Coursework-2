@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='style.css' rel='stylesheet' type='text/css'/>
+    <title>VAGE Shop</title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <nav id="menu" style="left: -100%;">
+            <a class="menuItem" href="index.html">HOME</a>
+            <a class="menuItem" href="shop.html">SHOP</a>
+            <a class="menuItem" href="contact.html">CONTACT</a>
+        </nav>
+
+        <div id="cover" style="left: -100%;">
+        </div>
+
+        <div id="menuButton">
+          <img id="button" src="img/menu-logo.png" alt="Menu">
+        </div>
+
+        <a href="index.html">
+          <img id="vageLogo"src="img/VAGE-logo.png" alt="VAGE">
+        </a>
+
+    </section>
+    </header>
+
+    <div class="countdown">
+      <h2>NEW CLOTHING IN:</h2>
+      <p id="counter"></p>
+    </div>
+
+  <div id="myBtnContainer">                               <!--FILTER-->
+
+  <button class="btn active" onclick="filterSelection('all')">SHOW ALL</button>
+  <button class="btn" onclick="filterSelection('t-shirts')">T-SHIRTS</button>
+  <button class="btn" onclick="filterSelection('hoodies')">HOODIES</button>
+
+  </div>
+
+<div class="container">                                     <!-- PRODUCTS-->
+
+  <div class="row">             <!-- FIRST ROW-->
+    <div class="column">
+
+        <div class="filterDiv hoodies">
+          <img class="mockups" src="img/logo-hoodie.jpg" alt="LOGO HOODIE" onclick="enlargeImg()">
+          <h1>VAGE LOGO HOODIE</h1>
+          <p class="price">£50.00</p>
+        </div>
+
+    </div>
+    <div class="column">
+
+        <div class="filterDiv hoodies">
+          <img class="mockups" src="img/smiley-hoodie.jpg" alt="SMILEY HOODIE" onclick="enlargeImg()">
+          <h1>SMILEY VAGE HOODIE</h1>
+          <p class="price">£50.00</p>
+        </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+
+        <div class="filterDiv t-shirts">
+          <img class="mockups" src="img/50-cent-tee.jpg" alt="50 CENT" onclick="enlargeImg()">
+          <h1>50 CENT TEE</h1>
+          <p class="price">£30.00</p>
+        </div>
+
+    </div>
+    <div class="column">
+
+        <div class="filterDiv t-shirts">
+          <img class="mockups" src="img/kobe-tee.jpg" alt="KOBE" onclick="enlargeImg()">
+          <h1>KOBE BRYANT TEE</h1>
+          <p class="price">£30.00</p>
+        </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+
+        <div class="filterDiv t-shirts">
+          <img class="mockups" src="img/2pac-tee.jpg" alt="2PAC" onclick="enlargeImg()">
+          <h1>TUPAC SHAKUR TEE</h1>
+          <p class="price">£30.00</p>
+        </div>
+
+    </div>
+    <div class="column">
+
+        <div class="filterDiv t-shirts">
+          <img class="mockups" src="img/lebron-tee.jpg" alt="LEBRON" onclick="enlargeImg()">
+          <h1>LEBRON JAMES TEE</h1>
+          <p class="price">£30.00</p>
+        </div>
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="column">
+
+        <div class="filterDiv t-shirts">
+          <img class="mockups" src="img/rodman-tee.jpg" alt="RODMAN" onclick="enlargeImg()">
+          <h1>DENNIS RODMAN TEE</h1>
+          <p class="price">£30.00</p>
+        </div>
+
+    </div>
+    <div class="column">
+
+        <div class="filterDiv t-shirts">
+          <img class="mockups" src="img/pop-smoke-tee.jpg" alt="POP SMOKE" onclick="enlargeImg()">
+          <h1>POP SMOKE TEE</h1>
+          <p class="price">£30.00</p>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <div class="socialmedia">
+      <p>FOR MORE UPDATES FOLLOW US HERE:</p>
+      <a href="https://www.instagram.com/vintageage.shop/" target="_blank">
+        <img id="instagram"src="img/instagram-logo.jpg" alt="VAGE">
+      </a>
+      <a href="https://www.facebook.com/vintageage.shop"target="_blank">
+        <img id="facebook"src="img/facebook-logo.jpg" alt="VAGE">
+      </a>
+
+    </div>
+
+  <script>
+                                                                            //MENU
+    openMenu = () => {
+    document.getElementById('menu').style.left = '0';
+    document.getElementById('cover').style.left = '0';
+    }
+
+    closeMenu = () => {
+    document.getElementById('menu').style.left = '-100%';
+    document.getElementById('cover').style.left = '-100%';
+    }
+
+    document.getElementById('menuButton').addEventListener('click', openMenu);
+    document.getElementById('cover').addEventListener('click', closeMenu);
+
+
+    // Set the date we're counting down to                                  //COUNTDOWN
+    var countDownDate = new Date("Jun 30, 2021 12:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("counter").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("counter").innerHTML = "EXPIRED";
+    }
+    }, 1000);
+
+                                                                          //FILTER
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+
+  </script>
+
+  </body>
+</html>

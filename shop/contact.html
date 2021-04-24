@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='style.css' rel='stylesheet' type='text/css'/>
+    <title>VAGE Shop</title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <nav id="menu" style="left: -100%;">
+            <a class="menuItem" href="index.html">HOME</a>
+            <a class="menuItem" href="shop.html">SHOP</a>
+            <a class="menuItem" href="contact.html">CONTACT</a>
+        </nav>
+
+        <div id="cover" style="left: -100%;">
+        </div>
+
+        <div id="menuButton">
+          <img id="button" src="img/menu-logo.png" alt="Menu">
+        </div>
+
+        <a href="index.html">
+          <img id="vageLogo"src="img/VAGE-logo.png" alt="VAGE">
+        </a>
+
+    </section>
+    </header>
+
+    <h2>CONTACT US</h2>
+
+  <div class="contactform">
+    <form action="/action_page.php">
+      <label for="name">NAME</label>
+      <input type="text" id="name" name="firstname" placeholder="Your name..">
+
+      <label for="email">EMAIL ADDRESS</label>
+      <input type="text" id="email" name="email" placeholder="Your email address..">
+
+      <label for="category">CATEGORY</label>
+      <select id="category" name="category">
+        <option value="order">Order status</option>
+        <option value="rerturns">Returns</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="message">MESSAGE</label>
+      <textarea id="message" name="message" placeholder="Type here.." style="height:200px"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+
+    <div class="socialmedia">
+      <p>EMAIL:<a id="email" href="mailto:shop.vintageage@gmail.com">shop.vintageage@gmail.com</a></p>
+      <p>FOR MORE UPDATES FOLLOW US HERE:</p>
+      <a href="https://www.instagram.com/vintageage.shop/" target="_blank">
+        <img id="instagram"src="img/instagram-logo.jpg" alt="VAGE">
+      </a>
+      <a href="https://www.facebook.com/vintageage.shop"target="_blank">
+        <img id="facebook"src="img/facebook-logo.jpg" alt="VAGE">
+      </a>
+
+    </div>
+
+  <script>
+
+
+    openMenu = () => {
+    document.getElementById('menu').style.left = '0';
+    document.getElementById('cover').style.left = '0';
+    }
+
+    closeMenu = () => {
+    document.getElementById('menu').style.left = '-100%';
+    document.getElementById('cover').style.left = '-100%';
+    }
+
+    document.getElementById('menuButton').addEventListener('click', openMenu);
+    document.getElementById('cover').addEventListener('click', closeMenu);
+
+
+  </script>
+
+  </body>
+</html>
