@@ -226,3 +226,8 @@ h1  {
   margin: 0 20% 40px 20%;
 
 }
+
+.snipcart-checkout {
+  float: right;
+  image-resolution: 50%;
+}
