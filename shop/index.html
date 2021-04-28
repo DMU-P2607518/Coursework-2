@@ -7,9 +7,10 @@
     <title>VAGE Shop</title>
   </head>
   <body>
-    <header>
+    <header>                              <!-- MENU -->
+    </menu>
       <section>
-        <nav id="menu" style="left: -100%;">
+        <nav id="menu" style="left: -100%;">      <!-- -100% to the left so its hidden-->
             <a class="menuItem" href="index.html">HOME</a>
             <a class="menuItem" href="shop.html">SHOP</a>
             <a class="menuItem" href="contact.html">CONTACT</a>
@@ -17,6 +18,7 @@
 
         <div id="cover" style="left: -100%;">
         </div>
+
 
         <div id="menuButton">
           <img id="button" src="img/menu-logo.png" alt="Menu">
@@ -40,7 +42,7 @@
           <img src="img/slide-3.jpg" alt="T-shirts" style="width: 100%">
         </div>
     </div>
-
+                                          <!--COUNTDOWN-->
     <div class="countdown">
       <h2>NEW CLOTHING IN:</h2>
       <p id="counter"></p>
@@ -50,19 +52,23 @@
       <a class="buynow" href="shop.html">BUY NOW</a>
     </div>
 
-    <div class="socialmedia">
-      <p>FOR MORE UPDATES FOLLOW US HERE:</p>
-      <a href="https://www.instagram.com/vintageage.shop/" target="_blank">
-        <img id="instagram"src="img/instagram-logo.jpg" alt="VAGE">
-      </a>
-      <a href="https://www.facebook.com/vintageage.shop"target="_blank">
-        <img id="facebook"src="img/facebook-logo.jpg" alt="VAGE">
-      </a>
+    <footer>
+                                            <!--SOCIAL MEDIA BUTTONS-->
+      <div class="socialmedia">
+        <p>FOR MORE UPDATES FOLLOW US HERE:</p>
+        <a href="https://www.instagram.com/vintageage.shop/" target="_blank">
+          <img id="instagram"src="img/instagram-logo.jpg" alt="VAGE">
+        </a>
+        <a href="https://www.facebook.com/vintageage.shop"target="_blank">
+          <img id="facebook"src="img/facebook-logo.jpg" alt="VAGE">
+        </a>
+      </div>
 
-    </div>
+    </footer>
 
   <script>
 
+                                                      //MENU
     openMenu = () => {
     document.getElementById('menu').style.left = '0';
     document.getElementById('cover').style.left = '0';
@@ -76,6 +82,7 @@
     document.getElementById('menuButton').addEventListener('click', openMenu);
     document.getElementById('cover').addEventListener('click', closeMenu);
 
+                                                      //SLIDESHOW
     var slideIndex = 0;
       showSlides();
 
@@ -88,35 +95,33 @@
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 3000);
+    setTimeout(showSlides, 3000);   //changes slides every 3 seconds
     }
 
-    // Set the date we're counting down to
+    // sets the date of the end of the countdown
     var countDownDate = new Date("Jun 30, 2021 12:00:00").getTime();
 
-    // Update the count down every 1 second
+    // updates the count down every 1 second
     var x = setInterval(function() {
 
-    // Get today's date and time
+    // gets today's date and time
     var now = new Date().getTime();
 
     // Find the distance between now and the count down date
     var distance = countDownDate - now;
 
-    // Time calculations for days, hours, minutes and seconds
+    // calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Output the result in an element with id="demo"
     document.getElementById("counter").innerHTML = days + "d " + hours + "h "
     + minutes + "m " + seconds + "s ";
 
-    // If the count down is over, write some text
     if (distance < 0) {
     clearInterval(x);
-    document.getElementById("counter").innerHTML = "EXPIRED";
+    document.getElementById("counter").innerHTML = "NEW CLOTHING AVAILABLE NOW"; // information after the end of the countdown
     }
     }, 1000);
 
