@@ -25,9 +25,9 @@ body {
 
 nav {
     background-color: black;
-    height: 100vh;
+    height: 100vh;      /*sets the height of the menu to be 100% of the viewports height */
     width: 35vw;
-    position: fixed;
+    position: fixed;    /* makes the menu stay in one position when scrolling */
     top: 0;
     z-index: 10;
     left: -100%;
@@ -92,7 +92,7 @@ h2 {
 }
 
 .menuItem {
-  text-decoration: none;
+  text-decoration: none;  /*removes default underline from links*/
   display: block;
   padding: 20px;
   color: white;
@@ -144,7 +144,7 @@ h2 {
   overflow: hidden;
 }
 
-/* Style the buttons */
+/* style of the filter buttons */
 .btn {
   border: none;
   outline: none;
@@ -167,8 +167,9 @@ h2 {
 }
 
 
+
 .mockups {
-  max-width: 100%;
+  max-width: 100%; /* 100% width is set to fill whole column */
 }
 
 h1  {
@@ -180,7 +181,7 @@ h1  {
   margin: 15px;
 }
 
-
+/* style of BUY NOW button on the main page */
 .buynow {
   text-align: center;
   display: block;
@@ -196,18 +197,20 @@ h1  {
   margin: 0 20% 40px 20%;
 
 }
-                              /* CART BUTTON*/
+
+/* CART BUTTON*/
 .cart {
   padding-top: 20px;
   padding-right: 10px;
-  max-height: 50px;
+  max-height: 50px;   /*matched the height and padding to the size of the logo and manu button on top of the page*/
 }
 .snipcart-checkout {
-  margin: 0px;
+  margin: 0px;     /* had to get rid of that default margin so the cart button is dispalyed on top of the page on the same line as menu and logo */
   padding: 0px;
   float: right;
 }
 
+/* ADD TO CART button*/
 .snipcart-add-item {
   font-size: 14px;
   font-family: sans-serif;
@@ -247,4 +250,3 @@ form .submit {
   height: 50px;
   margin-top: 20px;
 }
-
