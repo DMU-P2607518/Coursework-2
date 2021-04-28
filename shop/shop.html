@@ -225,7 +225,7 @@
   </div>
 </div>
 
-
+<footer>
     <div class="socialmedia">
       <p>FOR MORE UPDATES FOLLOW US HERE:</p>
       <a href="https://www.instagram.com/vintageage.shop/" target="_blank">
@@ -236,6 +236,8 @@
       </a>
 
     </div>
+</footer>
+
 
   <script>
                                                         //MENU
@@ -252,22 +254,7 @@
   document.getElementById('menuButton').addEventListener('click', openMenu);
   document.getElementById('cover').addEventListener('click', closeMenu);
 
-                                                      //SLIDESHOW
-  var slideIndex = 0;
-  showSlides();
-
-  function showSlides() {
-  var photo;
-  var slides = document.getElementsByClassName("mySlides");
-  for (photo = 0; photo < slides.length; photo++) {
-  slides[photo].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 3000);   //changes slides every 3 seconds
-  }
-
+                                                      //COUNTDOWN
   // sets the date of the end of the countdown
   var countDownDate = new Date("Jun 30, 2021 12:00:00").getTime();
 
