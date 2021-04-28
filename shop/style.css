@@ -4,6 +4,10 @@ body {
   padding: 0;
   }
 
+footer {
+  margin-top: 50px;
+}
+
 
 #vageLogo {
   max-height: 70px;
